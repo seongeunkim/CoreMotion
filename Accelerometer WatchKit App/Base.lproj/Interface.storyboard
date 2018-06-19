@@ -1,14 +1,35 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Accelerometer_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="X:" id="uGR-iy-2ES"/>
+                        <label alignment="left" text="Y:" id="R4I-DL-YWc"/>
+                        <label alignment="left" text="Z:" id="HUk-EF-WA8"/>
+                        <label alignment="left" text="gX:" id="NRg-jv-eUM"/>
+                        <label alignment="left" text="gY:" id="qwD-dA-GHd"/>
+                        <label alignment="left" text="gZ:" id="tQT-Ul-8cH"/>
+                    </items>
+                    <connections>
+                        <outlet property="accX" destination="uGR-iy-2ES" id="2b4-qr-RBD"/>
+                        <outlet property="accY" destination="R4I-DL-YWc" id="Qxp-Qg-fHH"/>
+                        <outlet property="accZ" destination="HUk-EF-WA8" id="W7u-WK-Yju"/>
+                        <outlet property="gyroX" destination="NRg-jv-eUM" id="qfM-hG-dL9"/>
+                        <outlet property="gyroY" destination="qwD-dA-GHd" id="uxQ-kQ-bhR"/>
+                        <outlet property="gyroZ" destination="tQT-Ul-8cH" id="MtB-tG-0oI"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
@@ -31,7 +52,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Accelerometer_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
